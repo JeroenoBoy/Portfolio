@@ -1,0 +1,16 @@
+@tailwind components;
+
+@layer components {
+  .img {
+    @apply shadow-slate-500 rounded-lg h-min relative cursor-pointer flex mb-4;
+    & img {
+      @apply rounded-lg;
+    }
+  }
+
+  .img.shadow {
+    box-shadow: -3px 5px 0 0 var(--tw-shadow-color),
+    -6px 10px 0 0 #475569;
+  }
+}
+

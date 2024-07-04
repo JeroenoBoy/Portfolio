@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+    .row       {@apply flex flex-col         gap-2 md:flex-row md:gap-4;}
+    .row-rev   {@apply flex flex-col-reverse gap-2 md:flex-row md:gap-4;}
+    .col       {@apply flex flex-col gap-2;}
+}

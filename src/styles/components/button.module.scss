@@ -1,0 +1,70 @@
+@tailwind components;
+
+@mixin addColor($name, $color) {
+	.btn.#{$name} {@apply
+		bg-#{$color}-500
+		shadow-#{$color}-700
+
+		hover:-translate-x-0.5
+		hover:translate-y-1
+
+		active:shadow-#{$color}-500
+		active:bg-#{$color}-400
+	;
+		box-shadow:
+			-2px 4px 0 0px var(--tw-shadow-color) !important;
+		;
+
+		&:hover {
+			box-shadow:
+				0px 0px 0 0px var(--tw-shadow-color) !important;
+			;
+		}
+
+		&:active {
+			box-shadow:
+				0px 0px 10px 0px var(--tw-shadow-color) !important;
+			;
+		}
+	}
+	.iconbtn.#{$name} {@apply
+		bg-#{$color}-800
+		text-#{$color}-700
+
+		bg-opacity-5
+		hover:bg-opacity-20
+		active:bg-opacity-50
+	;}
+}
+
+@layer components {
+	.btn {@apply
+		rounded-lg
+		px-4 py-2
+
+		font-mono font-bold uppercase
+		text-lg text-white
+
+		transition-all duration-150
+	;}
+
+	.iconbtn {@apply
+		flex
+		items-center
+		justify-center
+		rounded-full
+		border-2
+		p-2
+
+		scale-105
+		active:scale-110
+
+		transition-all duration-200
+	;}
+
+	@include addColor("primary", "green");
+	@include addColor("secondary", "teal");
+	@include addColor("white", "gray");
+	@include addColor("blue", "blue");
+	@include addColor("red", "red");
+}

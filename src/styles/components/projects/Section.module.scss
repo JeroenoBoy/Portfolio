@@ -1,0 +1,30 @@
+@tailwind components;
+
+@layer components {
+    .section {
+        overflow: hidden;
+    }
+    .button {@apply
+        flex items-center gap-2
+        rounded bg-green-500
+        py-1 px-4 ml-1
+
+        transition-all duration-150
+        cursor-pointer
+        text-slate-200
+
+        font-bold uppercase
+
+        shadow-green-700
+    ;
+      box-shadow: -3px 4px 0 0 var(--tw-shadow-color) !important;;
+
+      &:hover {
+        box-shadow: 0 0 0 0 var(--tw-shadow-color) !important;;
+        transform: translate(-3px, 4px);
+      }
+
+      &:active {@apply bg-green-400}
+    }
+}
+

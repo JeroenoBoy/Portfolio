@@ -1,0 +1,65 @@
+@tailwind components;
+@layer components {
+
+	.select {@apply
+		relative
+		bg-gray-800 rounded-xl
+		text-white
+		
+		cursor-pointer
+		px-4 py-2
+
+		focus:ring-1
+		focus:ring-primary
+	;}
+
+	.dropdown {@apply
+		absolute top-full left-0
+		w-full mt-1
+		bg-gray-800
+		rounded-xl
+	;}
+
+	/* Option elements */
+
+	/* .selectedOption, .option {@apply
+	;} */
+
+	.option {@apply
+		relative
+		py-2 pl-6 pr-4
+		transition-all ease-in-out duration-200
+		cursor-pointer
+		hover:bg-gray-700
+	;}
+
+	.option:first-child {@apply rounded-t-xl;}
+	.option:last-child  {@apply rounded-b-xl;}
+
+	.option>.selected {@apply
+		absolute left-1 top-1/2
+		transform
+		text-primary
+	;
+		--tw-translate-y: -50%;
+	}
+
+	/* Icon */
+
+	.icon.open {@apply
+		rotate-180	
+	;}
+
+	.icon {@apply
+		absolute my-auto
+
+		right-0 top-1/2
+		
+		transform
+		transition-transform
+	;
+		--tw-translate-x: -50%;
+		--tw-translate-y: -50%;
+	}
+
+}

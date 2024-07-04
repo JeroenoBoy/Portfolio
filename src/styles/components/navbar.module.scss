@@ -1,0 +1,93 @@
+@tailwind components;
+
+@layer components {
+	.nav {@apply
+		transition-colors duration-300
+		fixed top-0 left-0 right-0
+		p-1
+		z-30
+		flex justify-center
+		bg-slate-900 bg-opacity-90
+		text-white
+		shadow-xl
+	;}
+
+	.link {@apply
+		rounded-full
+		bg-opacity-20
+		hover:bg-opacity-40
+		active:bg-opacity-50
+		transition-colors duration-150
+		relative
+	;
+		&::after {@apply
+			w-0 h-0.5
+			absolute
+			right-0
+			bottom-0
+			bg-white
+			rounded-full
+			content-center
+			transition-all duration-200
+		;
+			content: '';
+		}
+
+		&.active::after {@apply w-3/4}
+		&.hover::after {@apply w-full}
+	}
+
+	.dropDown {@apply
+		transition-all duration-500
+		z-30
+		m-2
+		rounded-xl
+		flex flex-col gap-2
+		fixed
+		right-0
+		overflow-hidden
+	;}
+
+	.ddLink {@apply
+		rounded-full px-3 py-1
+		bg-black bg-opacity-30
+		hover:bg-opacity-40
+		active:bg-opacity-50
+
+		transition-colors duration-150
+	;}
+
+	.modal {@apply
+		z-50
+		fixed
+		w-screen h-screen
+		top-0 left-0
+		flex justify-center items-center
+		bg-black bg-opacity-50
+	;}
+
+	.modal>.content {@apply
+		bg-gray-800 rounded-xl
+		p-4
+	;}
+
+	.iconbtn {@apply
+		flex
+		items-center
+		justify-center
+		rounded-full
+		p-3
+
+		bg-black
+		bg-opacity-20
+		hover:bg-opacity-40
+		active:bg-opacity-50
+
+		transition-colors duration-150
+	;}
+
+	.iconbtn > svg {
+		width: 1.2rem !important;
+		height: 1.2rem !important;
+	}
+}

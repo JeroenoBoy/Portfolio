@@ -1,0 +1,46 @@
+@tailwind components;
+@layer components {
+
+    .hero__carousel {@apply relative;}
+    .carousel-image_container {@apply w-full h-full overflow-hidden relative}
+    .carousel-image_parent {@apply absolute transition-all duration-1000 h-full flex}
+    .carousel-image {@apply relative top-0;}
+    .carousel-image_animated {@apply transition-all duration-1000;}
+
+    .carousel-button {@apply
+        absolute w-20 h-full top-0
+        cursor-pointer
+
+        flex justify-center items-center
+
+        bg-black
+        bg-opacity-0
+        hover:bg-opacity-10
+        active:bg-opacity-20
+
+        transition-colors duration-200
+    ;}
+
+
+    .carousel-indexes {@apply
+        absolute bottom-10 w-full
+        flex justify-center items-center
+        gap-2
+    ;}
+
+
+    .carousel-index {@apply
+        bg-black bg-opacity-40
+
+        cursor-pointer
+
+        w-4 h-4 rounded-full
+        transition-colors duration-200
+    ;}
+
+
+    .carousel-index_active {@apply
+        bg-white
+        bg-opacity-30
+    ;}
+}

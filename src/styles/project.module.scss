@@ -1,0 +1,26 @@
+@tailwind components;
+
+@layer components {
+
+  .project {@apply
+    p-4 bg-white rounded-lg
+    transition-all
+    hover:-translate-x-2.5
+    hover:translate-y-2.5
+  ;
+    box-shadow:
+      -6px 8px #aaa,
+      -12px 16px #888,
+      0px 0px 32px #ddd;
+
+    &:hover {
+      box-shadow:
+        -2px 4px #aaa,
+        -4px 8px #888;
+    }
+
+    .project__banner__container {@apply rounded relative w-full overflow-hidden}
+    .project__banner {@apply rounded-lg overflow-hidden m-auto absolute top-0 w-full h-full object-cover}
+  }
+
+}

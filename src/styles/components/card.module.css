@@ -1,0 +1,9 @@
+@tailwind components;
+
+@layer components {
+
+	.card {@apply
+		p-4 bg-gray-700 rounded-xl
+	;}
+	
+}
