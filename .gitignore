@@ -129,3 +129,4 @@ dist
 
 # Code editor BS
 .idea
+.direnv
