@@ -6,7 +6,6 @@ import NLink from "next/link";
 import {faGithub, faItchIo} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {useEmail} from "./hooks/useEmail";
-import Image from 'next/image';
 
 
 export default function Footer() {

@@ -90,8 +90,7 @@ export default class Carousel extends Component<CarouselProps, CarouselState>{
 
 
                 <div className={styles['carousel-indexes']}>
-                    {images.map((img, i) => (
-                        <div
+                    {images.map((img, i) => ( <div
                             key={i}
                             className={clsx(styles['carousel-index'], {
                                 [styles['carousel-index_active']]: i === current
