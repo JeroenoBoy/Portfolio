@@ -1,5 +1,6 @@
 # Portfolio
-The mildly cursed source code for my Portfolio website, written with NextJS
+The mildly cursed source code for my [Portfolio](https://www.jeroenvdg.com) website, written with NextJS <br>
+Please read the liscence, ty
 
 ## Nix
 Package: `nix build` <br>
