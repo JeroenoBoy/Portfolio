@@ -30,7 +30,7 @@
       packages = rec {
         default = portfolio;
         portfolio = pkgs.buildNpmPackage {
-          buildInputs =  with pkgs; [ nodejs ];
+          buildInputs =  with pkgs; [ nodejs_22 ];
           name = "Portfolio";
           src = ./.;
 
